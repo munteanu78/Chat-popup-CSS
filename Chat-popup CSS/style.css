@@ -1,0 +1,108 @@
+body {
+    background-color: #333;
+}
+body, h2, ul{
+    margin: 0px;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+#chat {
+    background-color: #456;
+    color: white;
+    font-family: Arial;
+    padding: 10px;
+    margin-right: -230px;
+    margin-top: 15px;
+    border: 2px solid darkorange;
+    border-radius:0 25px 25px 25px  ;
+    box-shadow: 4px 4px 0px 4px  rgb(207, 85, 14);
+    float: right;
+    animation: pop-up 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    
+}
+#chat h2{
+    margin-bottom: 20px;
+}
+
+#chat h2::before{
+    content: "";
+    background-image: url(avataaars.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 60px ;
+    height: 60px;
+    margin-left: -70px;
+    margin-right: 12px;
+}
+
+#chat .messages{
+    border: 0px solid white;
+    padding: 10px ;
+}
+#chat .messages li{
+     background-color: darkorange;
+     margin-bottom: 10px;
+     box-shadow: 1px 1px 0px 1px  rgb(207, 85, 14);
+     padding: 5px;
+     border-radius:0 15px 15px 15px  ;
+
+     opacity: 0;
+ }
+#chat .messages li:nth-child(1){
+      animation: show-message 1s;
+      animation-delay: 7s;
+      animation-fill-mode: forwards;
+}
+#chat .messages li:nth-child(2){
+    animation: show-message 1s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+#chat .messages li:nth-child(3){
+    animation: show-message 1s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+
+ 
+#chat textarea{
+    width: 200px;
+}
+#chat #button{
+    background-color: darkorange;
+    
+    box-shadow: 1px 1px 1px 1px  rgb(207, 85, 14);
+    padding: 5px;
+    border-radius:0px 15px 15px 15px; 
+    border-style: none;
+    color: rgb(255, 255, 255);
+    animation: 0.5s;
+}
+#chat #button:hover{
+    background-color: rgb(255, 81, 0);
+    transition: 0.5s;
+}
+ @keyframes pop-up{
+     from {
+        margin-right: -225px;
+     }
+
+     to{
+        margin-right: 15px;
+     }
+ }
+
+ @keyframes show-message{
+     from{
+        opacity: 0;
+     }
+     to{
+        opacity: 1;
+     }
+ }
